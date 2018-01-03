@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- your webpage info goes here -->
+
+    <title>MyBook</title>
+	<meta charset="utf-8">
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->	
+
+	<style type="text/css">
+		/*
+* multi-line comment
+*/
+p{ line-height: 2em; }
+h1, h2, h3, h4{
+    color: darkred;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 2.7em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: none; }
+
+/* you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly */
+
+body{
+    font-family: Robonto , cursive; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; background: #eee;
+}
+/* you can put your code all in one line like above */
+#page{ margin: 20px; }
+
+/* or on different lines like below */
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: Robonto, cursive;
+	display: inline-block;
+	text-shadow:2px 2px 2px darkred;
+}
+/* but try and be as concise as possible */
+#nav{
+	width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: darkred;
+				color: white;
+				text-decoration: none;
+				border-radius: 100px;
+
+			}
+			#nav ul li a:hover{
+				background-color: rgb(66, 1, 1);
+				box-shadow: 0px 1px 1px #666;
+
+			}
+			#nav ul li a:active{ background-color: rgb(66, 1, 1); }
+
+#content , #content1{
+	
+	background: white;
+	padding: 20px;
+	clear: both;
+	
+	
+}
+ #content p{
+	font-size: 150%;
+}
+#content1 p{
+	font-size: 150%;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: grey;
+	}
+
+/* multiple styles seperated by a , */
+#content, #content1,
+ul li a{ box-shadow: 0px 1px 1px #999; }
+	</style>
+</head>
+<body>
+
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="logo">
+			<h1><a href="index.html" id="logoLink">My<b>Book</b>.com</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="Cours.html">Cours</a></li>
+				<li><a href="Exercices.html">Exercices</a></li>
+			</ul>	
+		</div>
+		<div id="content">
+			<h2><b>C'ect Quoi La Probabilité?</b></h2>
+			<p>
+				Le terme probabilité possède plusieurs sens : venu historiquement du latin probabilitas, il désigne l'opposé du concept de certitude ; il est également une évaluation du caractère probable d'un événement, c'est-à-dire qu'une valeur permet de représenter son degré de certitude ; récemment, la probabilité est devenue une science mathématique et est appelée théorie des probabilités ou plus simplement probabilités; enfin une doctrine porte également le nom de probabilisme.
+			</p>
+			<p> 
+				La probabilité d'un événement est un nombre réel compris entre 0 et 1. Plus ce nombre est grand, plus le risque, ou la chance, que l'événement se produise est grand. L'étude scientifique des probabilités est relativement récente dans l'histoire des mathématiques. L'étude des probabilités a connu de nombreux développements depuis le xviiie siècle grâce à l'étude de l'aspect aléatoire et en partie imprévisible de certains phénomènes, en particulier les jeux de hasard. Ceux-ci ont conduit les mathématiciens à développer une théorie qui a ensuite eu des implications dans des domaines aussi variés que la météorologie, la finance ou la chimie.
+			</p>
+		</div>
+		<div id="content1">
+			
+			<p>
+				Le terme probabilité possède plusieurs sens : venu historiquement du latin probabilitas, il désigne l'opposé du concept de certitude ; il est également une évaluation du caractère probable d'un événement, c'est-à-dire qu'une valeur permet de représenter son degré de certitude ; récemment, la probabilité est devenue une science mathématique et est appelée théorie des probabilités ou plus simplement probabilités; enfin une doctrine porte également le nom de probabilisme.
+			</p>
+			<p> 
+				La probabilité d'un événement est un nombre réel compris entre 0 et 1. Plus ce nombre est grand, plus le risque, ou la chance, que l'événement se produise est grand. L'étude scientifique des probabilités est relativement récente dans l'histoire des mathématiques. L'étude des probabilités a connu de nombreux développements depuis le xviiie siècle grâce à l'étude de l'aspect aléatoire et en partie imprévisible de certains phénomènes, en particulier les jeux de hasard. Ceux-ci ont conduit les mathématiciens à développer une théorie qui a ensuite eu des implications dans des domaines aussi variés que la météorologie, la finance ou la chimie.
+			</p>
+		</div>
+		<div id="footer">
+			<p>
+				Fait par <a href="https://ma.linkedin.com/in/manal-drissi-4103b1140" target="_blank">Manal.drissi</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- your webpage info goes here -->
+
+    <title>MyBook</title>
+	<meta charset="utf-8">
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->	
+
+	<style type="text/css">
+		/*
+* multi-line comment
+*/
+p{ line-height: 1.5em; }
+ol{line-height: 1.5em;
+}
+h1, h2, h3, h4{
+    color: darkgreen;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 2.7em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: none; }
+
+/* you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly */
+
+body{
+    font-family: Robonto , cursive; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; background: #eee;
+}
+/* you can put your code all in one line like above */
+#page{ margin: 20px; }
+
+/* or on different lines like below */
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: Robonto, cursive;
+	display: inline-block;
+	text-shadow:2px 2px 2px darkgreen;
+}
+/* but try and be as concise as possible */
+#nav{
+	width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: darkgreen;
+				color: white;
+				text-decoration: none;
+				border-radius: 100px;
+
+			}
+			#nav ul li a:hover{
+				background-color:rgb(2, 33, 3);
+				box-shadow: 0px 1px 1px #666;
+
+			}
+			#nav ul li a:active{ background-color: rgb(2, 33, 3); }
+
+#content ,#content0 , #content1 ,#content2 ,#content3, #content4 ,#content5{
+	background: white;
+	padding: 20px;
+	clear: both;
+	margin-bottom: 1%;
+	box-shadow: 0px 1px 1px #666;
+	
+}
+#content p{
+	font-size: 150%;
+}
+#content0 p{
+	font-size: 150%;
+}
+#content1 p{
+	font-size: 130%;
+}
+#content2 p{
+	font-size: 150%;
+}
+#content3 p {
+	font-size: 150%;
+}
+#content3 p ul {
+	font-size: 170%;
+}
+#content4 p {
+	font-size: 130%;
+}
+
+#content4 p {
+	font-size: 120%;
+}
+#content4 ol {
+	font-size: 120%;
+}
+
+#footer{
+	border-bottom: 1px #ccc solid;margin-bottom: 1%;
+	
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: grey;
+
+	}
+
+/* multiple styles seperated by a , */
+#content, #content1,
+ul li a{ box-shadow: 0px 1px 1px #999; }
+span{color: red;
+	font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="logo">
+			<h1><a href="index.html" id="logoLink">My<b>Book</b>.com</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="Cours.html">Cours</a></li>
+				<li><a href="Exercices.html">Exercices</a></li>
+			</ul>	
+		</div>
+		<div id="content">
+			<h2><b>1. Expérience aléatoire.</b></h2>
+			<p>
+				Le lancer d'un ou de plusieurs dés, le tirage de cartes ou de numéros sont des expériences aléatoires: on connait les résultats possibles mais on ne sait pas lequel va se produire avant l'expérience réalisée.
+			</p>
+		</div>
+		<div id="content0">
+			<h2><b>2. Éventualités. Univers.</b></h2>
+			<p> 
+				Les résultats possibles d'une expérience aléatoire sont appelés éventualités ou issues<br>
+
+                L'ensemble des éventualités est appelé univers; on le note souvent<span> Ω</span></p>
+              <div id="content1">
+               <p> <b><span style="color: darkgreen"> Exemple:</span></b> On lance un dé cubique.<br>
+
+                Les issues sont : <span>1</span>, <span>2</span>,<span> 3</span>,<span> 4</span>,<span> 5</span> et <span>6</span>. L'univers est<span> Ω</span>= ensemble des nombres <span>1</span>;<span> 2</span>;<span> 3</span>;<span> 4</span>;<span> 5</span>; <span>6</span><br>
+            </p>
+            </div>
+			
+		</div>
+		<div id="content2">
+			<h2><b>3. Événements.</b></h2>
+			<p>
+				Une partie de l'univers est appelée événement.<br>
+
+                Un événement élémentaire est un événement constitué d'une seule éventualité<br>
+
+                Deux événements sont contraires lorsque leur réunion est l'univers et leur intersection est vide<br>
+
+
+
+                exemples: On lance un dé cubique.<br>
+
+                L'événement <span>'obtenir un nombre impair'</span> est constitué des nombres<span> 1</span>;<span> 3</span>;<span> 5</span> ; l'événement contraire est constitué de<span> 2</span>;<span> 4</span>; <span>6</span><br>
+
+                L'événement <span>'obtenir six'</span> est constitué du nombre <span>6</span>: c'est un événement élémentaire.<br> 
+                L'événement<span> 'obtenir 8'</span> est <span>Ø</span>, ensemble vide: c'est l'événement impossible. <br>
+                L'événement <span>'obtenir un nombre inférieur à 10'</span> est égal à l'univers <span>Ω</span>: c'est l'événement certain<br>
+			</p>
+		</div>
+		<div id="content3">
+			<h2><b>4. Probabilité</b></h2>
+			<p> 
+				La probabilité d'un événement est un nombre compris entre<span> 0</span> et<span> 1</span><br>
+
+                <span>0</span> est la probabilité de l'événement impossible et <span>1</span> est la probabilité de l'événement certain.<br>
+
+                Plus la probabilité d'un événement est proche de <span>1</span>, plus l'événement a des 'chances' de se réaliser<br>
+
+                La probabilité d'un événement est égale à la probabilité des événements élémentaires qui le composent<br>
+
+
+
+                On définit une loi de probabilité sur l'ensemble des n issues d'une expérience aléatoire, en associant à chaque issue notée xi un nombre pi positif de sorte que la somme <span>p1+p2+p3+...+pn= 1</span><br>
+			</p>
+		
+		<div id="content4">
+			<h2><b><u> Exemples:</u></b></h2>
+			<p>
+				<ol> <li> Les statistiques effectuées sur les naissances permettent d'estimer qu'il naît <span>100</span> filles pour <span>205</span> naissances, soit environ <span>48.8% </span>de naissances de filles. On peut définir une probabilité sur l'univers lié aux deux événements F:'l'enfant à naître est une fille' et G:'l'enfant à naître est un garçon' en utilisant ces statistiques: <span>p(F)=0.488 et p(G)=0.512</<span>span><br><br></li>
+
+                <li> La probabilité d'obtenir un nombre impair lorsqu'on lance un dé cubique est égale à:<br></li>
+
+                <span>p(1)+p(3)+p(5)</span><br></ol>
+
+
+
+
+
+                Lorsque chaque événement élémentaire a la même probabilité de se réaliser, on dit que les événements élémentaires sont équiprobables<br></p>
+               
+               	<p>
+                <span style="font-weight: bold; color: darkgreen;"> Exemples:</span>
+                <br> Le lancer d'un dé non pipé (= bien équilibré) est associé à six événements élémentaires équiprobables:<br>
+
+               <span>p(1)=p(2)=p(3)=p(4)=p(5)=p(6)=1/6<br></span> 
+<br>
+                On peut aussi estimer qu'il y a une chance sur deux d'avoir une fille quand on attend un enfant. Dans ce cas, on a défini une probabilité sur l'univers de sorte que les événements élémentaires soient équiprobables: <span> p(F)=p(G)=1/2</span><br><br></p>
+               </div>
+
+           <p>
+                <u> Propriétés:</u> A et B sont deux événements liés à une même expérience aléatoire<br>
+
+               <center><span style="font-size: 140%"> p(AUB)=p(A)+p(B)-p(A∩B)</span></center><br></p>
+
+
+
+
+           <p >
+                Les probabilités sont un outil que l'on retrouve:<br>
+           <ul style="font-size: 130%">
+               <li> dans les jeux de hasard</li><br>
+
+                <li> dans la météo</li><br>
+
+                <li> dans l'évaluation des risques dans des installations industrielles</li><br>
+
+                <li> en médecine</li><br>
+
+                <li> etc.</li><br>
+            </ul></p>
+
+        
+		
+	</div>
+		</div>
+		<div id="footer">
+			<p>
+				fait par <a href="https://ma.linkedin.com/in/manal-drissi-4103b1140" target="_blank">Manal.Drissi</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

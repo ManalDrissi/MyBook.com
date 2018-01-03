@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- your webpage info goes here -->
+
+    <title>MyBook</title>
+	<meta charset="utf-8">
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->	
+
+	<style type="text/css">
+		/*
+* multi-line comment
+*/
+*{
+	
+	font-size: 100%;
+}
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: darkorange;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 2.7em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: none; }
+
+/* you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly */
+
+body{
+    font-family: Robonto , cursive; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; background: #eee;
+}
+/* you can put your code all in one line like above */
+#page{ margin: 20px; }
+
+/* or on different lines like below */
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: Robonto, cursive;
+	display: inline-block;
+	text-shadow:2px 2px 2px darkorange;
+}
+/* but try and be as concise as possible */
+#nav{
+	width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: darkorange;
+				color: white;
+				text-decoration: none;
+				border-radius: 100px;
+
+			}
+			#nav ul li a:hover{
+				background-color: rgb(89, 50, 0);
+				box-shadow: 0px 1px 1px #666;
+
+			}
+			#nav ul li a:active{ background-color: rgb(89, 50, 0)); }
+
+#content , #content1 ,#content2 ,#content3{
+    background: white;
+	padding: 20px;
+	clear: both;
+	margin-bottom: 1%;
+	box-shadow: 0px 1px 1px #666;
+}
+#content p{
+	font-size: 150%;
+}
+#content1 p{
+	font-size: 150%;
+}
+#content2 p{
+	font-size: 150%;}
+
+	#content3 p{
+	font-size: 150%;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: grey;
+	}
+
+/* multiple styles seperated by a , */
+#content,
+ul li a{ box-shadow: 0px 1px 1px #999; }
+form #p1, form #p2, form #p3, form #p4, form #p5,form #p6,form #p7, form #p8,form #p9,form #p10, form #p11{
+		font-size: 13pt;
+	color: red;
+
+}
+#content1, #content3{
+	font-size: 14pt;
+}
+form #submit{
+	float: center;
+}
+	</style>
+	<script type="text/javascript">
+		function valid1() {
+			var s1 = document.getElementById('select1').value;
+			if(s1=="1"){
+				document.getElementById('p1').innerHTML="Bravo! <br> Il y a 4 dames sur les 32 cartes possibles et chaque carte a la même probabilité d'être tirée (tirage au hasard)";
+				return false;
+			}
+			document.getElementById('p1').innerHTML="Non! c'est 4/32 <br> Il y a 4 dames sur les 32 cartes possibles et chaque carte a la même probabilité d'être tirée (tirage au hasard)";
+			return false;
+		}
+
+		function valid2() {
+			var s2 = document.getElementById('select2').value;
+			if(s2=="2"){
+				document.getElementById('p2').innerHTML="Bravo! <br>Il y a 8 cœurs sur les 32 cartes possibles";
+				return false;
+			}
+			document.getElementById('p2').innerHTML="Non! c'est 8/32 <br> Il y a 8 cœurs sur les 32 cartes possibles";
+			return false;
+		}
+
+		function valid3() {
+			var s3 = document.getElementById('select3').value;
+			if(s3=="3"){
+				document.getElementById('p3').innerHTML="Bravo! <br> Il n'y a qu'une seule dame de cœur sur les 32 cartes possibles";
+				return false;
+			}
+			document.getElementById('p3').innerHTML="Non! c'est 1/32 <br> Il n'y a qu'une seule dame de cœur sur les 32 cartes possibles";
+			return false;
+		}
+
+		function valid4() {
+			var s4 = document.getElementById('select4').value;
+			if(s4=="4"){
+				document.getElementById('p4').innerHTML="Bravo! <br> En effet, on compte la dame de cœur, 3 autres dames et 7 autres cœurs; soit 11 cartes sur 32 réalisant l'événement D";
+				return false;
+			}
+			document.getElementById('p4').innerHTML="Non! c'est 11/32 <br> En effet, on compte la dame de cœur, 3 autres dames et 7 autres cœurs; soit 11 cartes sur 32 réalisant l'événement D";
+			return false;
+		}
+
+		function valid5() {
+			var s5 = document.getElementById('select5').value;
+			if(s5=="5"){
+				document.getElementById('p5').innerHTML="Bravo! <br> E et D sont deux événements contraires, donc p(D)+p(E)=1";
+				return false;
+			}
+			document.getElementById('p5').innerHTML="Non! c'est 21/32 <br> E et D sont deux événements contraires, donc p(D)+p(E)=1";
+			return false;
+		}
+
+		function valid6() {
+			var s6 = document.getElementById('select6').value;
+			if(s6=="6"){
+				document.getElementById('p6').innerHTML="Bravo! <br> en effet, il n'y a pas de carte marquée deux dans un jeu de 32 cartes";
+				return false;
+			}
+			document.getElementById('p6').innerHTML="Non! c'est 0 <br> en effet, il n'y a pas de carte marquée deux dans un jeu de 32 cartes";
+			return false;
+		}
+
+
+		function valid7() {
+			var s7 = document.getElementById('select7').value;
+			if(s7=="7"){
+				document.getElementById('p7').innerHTML="Bravo! <br> il y a 12 issues équiprobables:P1, P2, ..., P6, F1, ..., F6; une seule (P6) permet de gagner 3€";
+				return false;
+			}
+			document.getElementById('p7').innerHTML="Non! c'est 1/12 <br> il y a 12 issues équiprobables:P1, P2, ..., P6, F1, ..., F6; une seule (P6) permet de gagner 3€";
+			return false;
+		}
+
+		function valid8() {
+			var s8 = document.getElementById('select8').value;
+			if(s8=="8"){
+				document.getElementById('p8').innerHTML="Bravo! <br>On est tombé sur Pile et obtenu un gain de 1€, ensuite on lance le dé (il n'y a plus que six issues), alors trois issues sur 6 réalisent 'obtenir 1€' (P1, P3 et P5)et 3/6=1/2";
+				return false;
+			}
+			document.getElementById('p8').innerHTML="Non! c'est 1/2 <br> On est tombé sur Pile et obtenu un gain de 1€, ensuite on lance le dé (il n'y a plus que six issues), alors trois issues sur 6 réalisent 'obtenir 1€' (P1, P3 et P5)et 3/6=1/2";
+			return false;
+		}
+
+		function valid9() {
+			var s9 = document.getElementById('select9').value;
+			if(s9=="9"){
+				document.getElementById('p9').innerHTML="Bravo! <br> Deux issues sur 12 réalisent 'obtenir 1€' et 'la pièce est tombée sur Face': (F2 et F4) et 2/12=1/6";
+				return false;
+			}
+			document.getElementById('p9').innerHTML="Non! c'est 1/6 <br> Deux issues sur 12 réalisent 'obtenir 1€' et 'la pièce est tombée sur Face': (F2 et F4) et 2/12=1/6";
+			return false;
+		}
+
+		function valid10() {
+			var s10 = document.getElementById('select10').value;
+			if(s10=="10"){
+				document.getElementById('p10').innerHTML="Bravo! <br> Cinq issues sur 12 réalisent 'obtenir 1€': P1, P3, P5, F2, F4";
+				return false;
+			}
+			document.getElementById('p10').innerHTML="Non! c'est 5/12 <br> Cinq issues sur 12 réalisent 'obtenir 1€': P1, P3, P5, F2, F4";
+			return false;
+		}
+
+		function valid11() {
+			var s11 = document.getElementById('select11').value;
+			if(s11=="11"){
+				document.getElementById('p11').innerHTML="Bravo! <br> La probabilité de ne pas gagner d'argent est 3/12=1/4 car seules les issues F1, F3 et F5 ne donnent rien; la probabilité de l'événement contraire est 3/4";
+				return false;
+			}
+			document.getElementById('p11').innerHTML="Non! c'est 3/4 <br> La probabilité de ne pas gagner d'argent est 3/12=1/4 car seules les issues F1, F3 et F5 ne donnent rien; la probabilité de l'événement contraire est 3/4";
+			return false;
+		}
+	</script>
+</head>
+<body>
+
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="logo">
+			<h1><a href="index.html" id="logoLink">My<b>Book</b>.com</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="Cours.html">Cours</a></li>
+				<li><a href="Exercices.html">Exercices</a></li>
+			</ul>	
+		</div>
+		<div id="content">
+			<p>Pour chacune des questions, donner le résultat sous forme d'une fraction irréductible</p>
+			<h2><b> Exercice 1 :</b></h2>
+			<p>
+				On tire au hasard une carte d'un jeu de 32 cartes. Calculer la probabilité des événements suivants
+
+			</p>
+		<div id="content1" >
+			
+			   <p> <form onsubmit="return valid1()">
+				    a) A:'La carte tirée est une dame', alors p(A)= 
+				    <select id="select1">
+					<option value="1"> 4/32</option>
+					<option>1/32</option>
+					<option>5/32</option>				
+			        </select>
+			        <input type="submit" name="" value="Submit"> 
+			        <p id="p1"></p>
+			        </form>
+
+				
+                   <form onsubmit="return valid2()">
+                    b) B:'La carte tirée est un cœur', alors p(B)=  
+                    <select id="select2">
+                 	<option> 6/32</option>
+					<option>7/32</option>
+					<option value="2">8/32</option>				
+		        	</select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p2"></p>
+			        </form>
+                    
+
+                    <form onsubmit="return valid3()">
+                    c) C:'La carte tirée est la dame de cœur', alors p(C)=
+                    <select id="select3">
+                	<option value="3">1/32</option>
+					<option>2/32</option>
+					<option>3/32</option>				
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p3"></p>
+			        </form>
+			        
+
+			        <form onsubmit="return valid4()">
+                    d) D:'La carte tirée est un cœur ou une dame', alors p(D)=
+                    <select id="select4">
+                	<option> 10/32</option>
+					<option value="4">11/32</option>
+					<option>12/32</option>				
+		        	</select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p4"></p>
+			        </form>
+			       
+
+			        <form onsubmit="return valid5()">
+                    e) E:'La carte tirée n'est ni une dame, ni un cœur', alors p(E)=
+                    <select id="select5">
+                	<option value="5"> 21/32</option>
+					<option>11/32</option>
+					<option>0</option>				
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p5"></p>
+			        </form>
+
+
+			        <form onsubmit="return valid6()">
+                    f) F:'La carte tirée est une carte marquée deux', alors p(F)=
+                    <select id="select6">
+                	<option> 1/32</option>
+					<option value="6">0</option>
+					<option>2/32</option>				
+			       </select>
+			       <input type="submit" name="" value="Submit">
+			       <p id="p6"></p>
+			       </form>
+			       
+
+			</p>
+		</div>	
+		</div>
+		<div id="content2">
+			<h2><b>Exercice 2 :</b></h2>
+			<p>
+				On lance une pièce de monnaie et un dé bien équilibrés.
+                Tomber sur PILE rapporte 1€, tomber sur FACE ne rapporte rien.<br>
+                Tomber sur 6 rapporte 2 €, tomber sur un nombre pair autre que 6 rapporte 1 €, tomber sur un numéro impair ne rapporte rien<br>
+			</p>
+			<div id="content3">
+				<p>
+					<form onsubmit="return valid7()">
+					a) La probabilité d'obtenir 3 € est égale à 
+					<select id="select7">
+					<option value="7"> 1/12</option>
+					<option>0</option>
+					<option>1/6</option>				
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p7"></p>
+			        </form>
+
+
+			        <form onsubmit="return valid8()">
+                    b) On sait que la pièce est tombée sur PILE; la probabilité d'obtenir exactement1 € à la fin du jeu est égale à 
+                    <select id="select8">
+                    <option value="8"> 1/2</option>
+					<option>1/3</option>
+					<option>1/5</option>
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p8"></p>
+			        </form>
+
+
+                    <form onsubmit="return valid9()">
+                    c) La probabilité de tomber sur FACE et d'obtenir 1 € est égale à 
+                    <select id="select9">
+                    <option> 1/2</option>
+					<option value="9">1/6</option>
+					<option>1/3</option>
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p9"></p>
+			        </form>
+                   
+
+                    <form onsubmit="return valid10()">
+                    d) La probabilité d'obtenir exactement 1 € est égale à 
+                    <select id="select10">
+                    <option> 1/12</option>
+					<option value="10">5/12</option>
+					<option>0</option>				
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p10"></p>
+			        </form>
+                    
+
+                    <form onsubmit="return valid11()">
+                    e) La probabilité de gagner de l'argent est égale à 
+                    <select id="select11">
+                    <option> 3/2</option>
+					<option>0</option>
+					<option value="11">3/4</option>
+			        </select>
+			        <input type="submit" name="" value="Submit">
+			        <p id="p11"></p>
+			        </form>
+
+				</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p>
+				fait par <a href="https://ma.linkedin.com/in/manal-drissi-4103b1140" target="_blank">Manal.Drissi</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
